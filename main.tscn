@@ -1,3 +1,49 @@
 [gd_scene format=3 uid="uid://clbrf038youul"]
 
+[ext_resource type="Script" uid="uid://d3fo5bxa05672" path="res://main.gd" id="1_ig7tw"]
+
 [node name="main" type="Node2D" unique_id=230997251]
+script = ExtResource("1_ig7tw")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=547592503]
+offset_right = 1152.0
+offset_bottom = 648.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1326334667]
+offset_left = 384.0
+offset_top = 208.0
+offset_right = 776.0
+offset_bottom = 264.0
+theme_override_font_sizes/normal_font_size = 32
+text = "Make My Order, QUICK!!!"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1244499316]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 384.0
+offset_top = 256.0
+offset_right = 768.0
+offset_bottom = 540.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="startBtn" type="Button" parent="VBoxContainer" unique_id=2024322886]
+layout_mode = 2
+text = "Start"
+
+[node name="settingsBtn" type="Button" parent="VBoxContainer" unique_id=1934477511]
+layout_mode = 2
+text = "Settings"
+
+[node name="quitBtn" type="Button" parent="VBoxContainer" unique_id=231704126]
+layout_mode = 2
+text = "Quit D:"
+
+[connection signal="pressed" from="VBoxContainer/startBtn" to="." method="_on_start_btn_pressed"]
+[connection signal="pressed" from="VBoxContainer/quitBtn" to="." method="_on_quit_btn_pressed"]
