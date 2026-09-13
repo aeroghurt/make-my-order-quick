@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://d10vlgbr45f7o"]
+
+[ext_resource type="Script" uid="uid://cjndxl3bmhjov" path="res://scripts/timer_scene.gd" id="1_bqqen"]
+[ext_resource type="Texture2D" uid="uid://crm4hq6uxh2ym" path="res://icon.svg" id="2_cn1cu"]
+[ext_resource type="Theme" uid="uid://cr6um3i5a07sy" path="res://theme.tres" id="3_jt8gb"]
+
+[node name="Node2D" type="Node2D" unique_id=616528366]
+script = ExtResource("1_bqqen")
+
+[node name="background" type="TextureRect" parent="." unique_id=398569007]
+offset_left = -8.0
+offset_top = -16.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="lifeContainer" type="HBoxContainer" parent="background" unique_id=1269137922]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -328.0
+offset_top = -64.0
+offset_right = 328.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="life1" type="TextureRect" parent="background/lifeContainer" unique_id=250124046]
+layout_mode = 2
+texture = ExtResource("2_cn1cu")
+
+[node name="life2" type="TextureRect" parent="background/lifeContainer" unique_id=1906325003]
+layout_mode = 2
+texture = ExtResource("2_cn1cu")
+
+[node name="life3" type="TextureRect" parent="background/lifeContainer" unique_id=568641374]
+layout_mode = 2
+texture = ExtResource("2_cn1cu")
+
+[node name="life4" type="TextureRect" parent="background/lifeContainer" unique_id=1074959235]
+layout_mode = 2
+texture = ExtResource("2_cn1cu")
+
+[node name="life5" type="TextureRect" parent="background/lifeContainer" unique_id=758156605]
+layout_mode = 2
+texture = ExtResource("2_cn1cu")
+
+[node name="level" type="RichTextLabel" parent="." unique_id=1604652552]
+offset_left = 904.0
+offset_top = 408.0
+offset_right = 1024.0
+offset_bottom = 456.0
+theme = ExtResource("3_jt8gb")
+text = "Level #"
+
+[node name="timer" type="RichTextLabel" parent="." unique_id=1582861965]
+offset_left = 936.0
+offset_top = 632.0
+offset_right = 994.0
+offset_bottom = 677.0
+theme = ExtResource("3_jt8gb")
+text = "0.0"
