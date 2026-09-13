@@ -1,0 +1,20 @@
+[gd_scene format=4 uid="uid://ck5yqhgp2r2xi"]
+
+[ext_resource type="Texture2D" uid="uid://bf3khguysohwk" path="res://assets/restaurant_tileset.png" id="1_og05i"]
+[ext_resource type="PackedScene" uid="uid://cjtsur0rlbwiq" path="res://scenes/player.tscn" id="1_tk6fs"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_og05i"]
+texture = ExtResource("1_og05i")
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_o4x5r"]
+sources/0 = SubResource("TileSetAtlasSource_og05i")
+
+[node name="minigame_1" type="Node2D" unique_id=514617017]
+scale = Vector2(8, 8)
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1164990728]
+tile_map_data = PackedByteArray("AAD9////AAAAAAAAAAD+////AAAAAAAAAAD/////AAAAAAAAAAAAAP//AAAAAAAAAAABAP//AAAAAAAAAAACAP//AAAAAAAAAAACAAAAAAAAAAAAAAACAAEAAAAAAAAAAAABAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAD//wEAAAAAAAAAAAD//wAAAAAAAAAAAAD+/wAAAAAAAAAAAAD9/wAAAAAAAAAAAAD9/wEAAAAAAAAAAAD+/wEAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAA=")
+tile_set = SubResource("TileSet_o4x5r")
+
+[node name="player" parent="." unique_id=1360201769 instance=ExtResource("1_tk6fs")]
